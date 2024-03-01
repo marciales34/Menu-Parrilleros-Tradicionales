@@ -1,0 +1,367 @@
+::ng-deep body {
+    background-color: rgb(233, 233, 233);
+    margin: 0;
+    
+  }
+  .body{
+    width: 100%;
+  }
+  
+  .contenedor-principal{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    max-height: 100%;
+    margin: 0% auto;
+  }
+  
+  .logo2{
+    position: absolute;
+    top: 5%;
+    right: 81%; 
+  }
+  
+  .circulo1{
+    border: 1px solid;
+    color: rgb(190, 188, 188);
+    border-radius: 50%;
+    height: 106%;
+    left: -23.1%;
+    position: absolute;
+    top: -42%;
+    width: 50.5%;
+  }
+  .circulo2{
+    border: 1px solid;
+    color: rgb(190, 188, 188);
+    border-radius: 50%;
+    height: 106%;
+    left: -23.5%;
+    position: absolute;
+    top: -62%;
+    width: 50.5%; 
+  }
+  .circulo3{
+    border: 1px solid;
+    color: rgb(190, 188, 188);
+    border-radius: 51%;
+    height: 107%;
+    left: -23.7%;
+    position: absolute;
+    top: -53.5%;
+    width: 50.5%; 
+  }
+  
+  .nav-botones{
+    position: absolute;
+    height: 9%;
+    left: 80%;
+    top: 7%;
+    width: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .boton {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .signin{
+    left: -34%;
+    position: absolute;
+    top: -15%;
+    height: 165%;
+    width: 155%;
+  }
+  .signin2{
+    left: 114%;
+    position: absolute;
+    top: -17%;
+    height: 165%;
+    width: 155%;
+  }
+  
+  
+  .login{
+    
+    left: 16%;
+    line-height: 130%;
+    position: absolute;
+    text-align: left;
+    top: 6%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .signup{
+    font-size: 120%;
+    left: 162%;
+    line-height: 140%;
+    position: absolute;
+    text-align: left;
+    top: 6%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .pagina-principal  {
+    background-color: transparent;
+    position: absolute;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:  absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    padding: 0.5%;
+    border: none;
+  }
+  
+  button {
+    background-color: transparent;
+    color: #000; 
+    border: none;
+    padding: 1%;
+    font-size: 115%;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: overline; /* Evita el subrayado predeterminado */
+    transition: text-decoration 0.3s; 
+  }
+  /* Espacio entre "Menu" y "Reservaciones" */
+  button:nth-child(2) {
+    margin-right: 10%;
+  }
+  
+  /* Estilo para "Sobre nosotros" y "Contacto" */
+  button:nth-child(3) {
+    margin-left: 10%;
+  }
+  
+  button:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .imagen1 {
+    position: absolute;
+    height: 40%;
+    left: 79%; 
+    top: 25%;
+    width: 18%;
+  }
+  .imagen2{
+    position: absolute;
+    height: 29%;
+    left: 46%;
+    top: 38%;
+    width: 25%;
+  }
+  .imagen3{
+    position: absolute;
+    height: 37%;
+    left: 83%;
+    top: 75%;
+    width: 16%;
+  }
+  
+  .restaurante{
+    position: absolute;
+    left: 60%;
+    top: 35%;
+    height: 78%;
+    width: 27%;
+  }
+  
+  .plato1{
+    position: absolute;
+    left: 45%;
+    top: 72%;
+    height: 42%;
+    width: 21%;
+  }
+  
+  .titulop{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 410%;
+    font-weight: 400%;
+    height: auto;
+    left: 12%;
+    line-height: 109%;
+    position: absolute;
+    text-align: left;
+    top: 42%;
+    width: 42%;
+  }
+  
+  .texto1{
+    left: 12%;
+    line-height: 260%;
+    text-align: left;
+    top: 67%;
+    width: 28%;
+    position: absolute;
+    font-size: 140%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
+  
+  }
+  
+  .nav-botones2{
+    height: 50%;
+    left: 10.4%;
+    top: 92%;
+    width: 50%;
+    position: absolute;
+  }
+  
+  .descplato1{ 
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive,;  
+    font-size: 120%;
+    top: 2.5%;
+    left: 6.3%;
+    font-weight: bold;
+  }
+  
+  .botonreserva{
+    height: 50%;
+    left: 19%;
+    top: 92%;
+    width: 50%;
+    position: absolute;
+  }
+  .descbotonreserva{ 
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive,;  
+    font-size: 120%;
+    top: 2.5%;
+    left: 6.3%;
+    font-weight: bold;
+  }
+  
+  .facebook{
+    position: absolute;
+    height: 100%;
+    left: 11%;
+    top: 103%;
+    width: 100%;
+  }
+  
+  .imgface{
+    position: absolute;
+    object-fit: cover;
+    height: 5%;
+    left: 1.5%;
+    top: 2%;
+    width: 2%;
+  }
+  
+  .face1{
+    border: 1px solid;
+    border-color: #000;
+    left: 1.3%;
+    top: 1.6%;
+    border-radius: 22.10%;
+    height: 5.4%;
+    width: 2.3%;
+    position: absolute;
+  }
+  
+  .twitter{
+    position: absolute;
+    height: 100%;
+    left: 16%;
+    top: 103%;
+    width: 100%;
+  }
+  
+  .imgtwi{
+    position: absolute;
+    object-fit: cover;
+    height: 5%;
+    left: 1.5%;
+    top: 2%;
+    width: 2%;
+  }
+  
+  .twi1{
+    border: 1px solid;
+    border-color: #000;
+    left: 1.3%;
+    top: 1.6%;
+    border-radius: 22.10%;
+    height: 5.4%;
+    width: 2.3%;
+    position: absolute;
+  }
+  
+  .instagram{
+    position: absolute;
+    height: 100%;
+    left: 21%;
+    top: 103%;
+    width: 100%;
+  }
+  
+  .imginsta{
+    position: absolute;
+    object-fit: cover;
+    height: 5%;
+    left: 1.5%;
+    top: 2%;
+    width: 2%;
+  }
+  
+  .insta1{
+    border: 1px solid;
+    border-color: #000;
+    left: 1.3%;
+    top: 1.6%;
+    border-radius: 22.10%;
+    height: 5.4%;
+    width: 2.3%;
+    position: absolute;
+  }
+  
+  .linea{
+    background-color: black;
+    height: 0.3%;
+    left: 27%;
+    object-fit: cover;
+    position: absolute;
+    top: 109%;
+    width: 18%;
+  }
+  .linea2{
+    background-color: black;
+    height: 0.3%;
+    left: 0%;
+    object-fit: cover;
+    position: absolute;
+    top: 120%;
+    width: 100%;
+  }
