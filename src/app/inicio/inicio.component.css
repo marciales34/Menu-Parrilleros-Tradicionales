@@ -56,60 +56,37 @@
   
   .nav-botones{
     position: absolute;
-    height: 9%;
-    left: 80%;
-    top: 7%;
-    width: 6%;
+    height: 10%;
+    left: 78%;
+    top: 4%;
+    width: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: 20%;
     align-items: center;
   }
   
   .boton {
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    width: 45%; 
+    height: 80%; 
+    border-radius: 5px;
+    background-color: #f58220; 
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+    margin: 0 2vw; 
   }
   
-  .signin{
-    left: -34%;
-    position: absolute;
-    top: -15%;
-    height: 165%;
-    width: 155%;
-  }
-  .signin2{
-    left: 114%;
-    position: absolute;
-    top: -17%;
-    height: 165%;
-    width: 155%;
-  }
-  
-  
-  .login{
-    
-    left: 16%;
-    line-height: 130%;
-    position: absolute;
-    text-align: left;
-    top: 6%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+  .boton button {
+    color: #ffffff; 
+    background-color: transparent;
+    font-size: 120%; 
     font-weight: bold;
-  }
-  
-  .signup{
-    font-size: 120%;
-    left: 162%;
-    line-height: 140%;
-    position: absolute;
-    text-align: left;
-    top: 6%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
   }
   
   .pagina-principal  {
@@ -123,7 +100,7 @@
     justify-content: space-around;
     align-items: center;
     position:  absolute;
-    top: 8%;
+    top: 6%;
     left: 50%;
     transform: translateX(-50%);
     width: 40%;
@@ -131,7 +108,7 @@
     border: none;
   }
   
-  button {
+  .barra {
     background-color: transparent;
     color: #000; 
     border: none;
@@ -142,28 +119,29 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: overline; /* Evita el subrayado predeterminado */
     transition: text-decoration 0.3s; 
-  }
-  /* Espacio entre "Menu" y "Reservaciones" */
-  button:nth-child(2) {
+}
+
+/* Espacio entre "Menu" y "Reservaciones" */
+.barra:nth-child(2) {
     margin-right: 10%;
-  }
-  
-  /* Estilo para "Sobre nosotros" y "Contacto" */
-  button:nth-child(3) {
+}
+
+/* Estilo para "Sobre nosotros" y "Contacto" */
+.barra:nth-child(3) {
     margin-left: 10%;
-  }
-  
-  button:hover {
+}
+
+.barra:hover {
     text-decoration: underline;
-  }
-  
-  
+}
+
   .imagen1 {
     position: absolute;
     height: 40%;
     left: 79%; 
     top: 25%;
     width: 18%;
+    
   }
   .imagen2{
     position: absolute;
@@ -186,6 +164,7 @@
     top: 35%;
     height: 78%;
     width: 27%;
+    filter:drop-shadow(10px 7px 20px #f58220);
   }
   
   .plato1{
@@ -194,6 +173,7 @@
     top: 72%;
     height: 42%;
     width: 21%;
+    filter:drop-shadow(10px 7px 20px #f58220);
   }
   
   .titulop{
@@ -219,143 +199,84 @@
     position: absolute;
     font-size: 140%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
-  
+
+  }
+
+  .botones_arriba{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position:  absolute;
+    top: 89%;
+    left: 26%;
+    transform: translateX(-50%);
+    width: 40%;
+    padding: 0.5%;
+    border: none;
+    height: 10%;
+  }
+
+  .botonReservas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%; 
+    height: 90%; 
+    border-radius: 5px;
+    background-color: #f58220; 
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+    margin: 0 2vw; 
   }
   
-  .nav-botones2{
-    height: 50%;
-    left: 10.4%;
-    top: 92%;
-    width: 50%;
-    position: absolute;
-  }
-  
-  .descplato1{ 
-    height: auto;
-    position: absolute;
-    white-space: nowrap;
-    width: auto;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive,;  
-    font-size: 120%;
-    top: 2.5%;
-    left: 6.3%;
+  .botonReservas button {
+    color: #ffffff; 
+    background-color: transparent;
+    font-size: 130%; 
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+  }
+
+  .botonEspecial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%; 
+    height: 90%; 
+    border-radius: 5px;
+    background-color: black; 
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+    margin: 0 2vw; 
   }
   
-  .botonreserva{
-    height: 50%;
-    left: 19%;
-    top: 92%;
-    width: 50%;
-    position: absolute;
-  }
-  .descbotonreserva{ 
-    height: auto;
-    position: absolute;
-    white-space: nowrap;
-    width: auto;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive,;  
-    font-size: 120%;
-    top: 2.5%;
-    left: 6.3%;
+  .botonEspecial button {
+    color: #ffffff; 
+    background-color: transparent;
+    font-size: 130%;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
   }
-  
-  .facebook{
-    position: absolute;
-    height: 100%;
-    left: 11%;
-    top: 103%;
-    width: 100%;
-  }
-  
-  .imgface{
-    position: absolute;
-    object-fit: cover;
-    height: 5%;
-    left: 1.5%;
-    top: 2%;
-    width: 2%;
-  }
-  
-  .face1{
-    border: 1px solid;
-    border-color: #000;
-    left: 1.3%;
-    top: 1.6%;
-    border-radius: 22.10%;
-    height: 5.4%;
-    width: 2.3%;
-    position: absolute;
-  }
-  
-  .twitter{
-    position: absolute;
-    height: 100%;
-    left: 16%;
-    top: 103%;
-    width: 100%;
-  }
-  
-  .imgtwi{
-    position: absolute;
-    object-fit: cover;
-    height: 5%;
-    left: 1.5%;
-    top: 2%;
-    width: 2%;
-  }
-  
-  .twi1{
-    border: 1px solid;
-    border-color: #000;
-    left: 1.3%;
-    top: 1.6%;
-    border-radius: 22.10%;
-    height: 5.4%;
-    width: 2.3%;
-    position: absolute;
-  }
-  
-  .instagram{
-    position: absolute;
-    height: 100%;
-    left: 21%;
-    top: 103%;
-    width: 100%;
-  }
-  
-  .imginsta{
-    position: absolute;
-    object-fit: cover;
-    height: 5%;
-    left: 1.5%;
-    top: 2%;
-    width: 2%;
-  }
-  
-  .insta1{
-    border: 1px solid;
-    border-color: #000;
-    left: 1.3%;
-    top: 1.6%;
-    border-radius: 22.10%;
-    height: 5.4%;
-    width: 2.3%;
-    position: absolute;
-  }
-  
+
   .linea{
     background-color: black;
     height: 0.3%;
-    left: 27%;
+    left: 7%;
     object-fit: cover;
     position: absolute;
     top: 109%;
-    width: 18%;
+    width: 40%;
   }
+
   .linea2{
     background-color: black;
     height: 0.3%;
@@ -364,4 +285,10 @@
     position: absolute;
     top: 120%;
     width: 100%;
+  }
+
+  .seccion2{
+    position: absolute;
+    top: 128%;
+    max-width: 100%;
   }
