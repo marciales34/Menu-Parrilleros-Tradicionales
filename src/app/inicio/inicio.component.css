@@ -296,6 +296,220 @@
 
     font-family: 'Courier New', Courier, monospace;
     
-
-
   }
+
+  .platosespeciales{
+    position: absolute;
+    top: 135%;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 300%;
+    font-weight: 400%;
+    font-weight: bold;
+  }
+
+  .desc_platos_especia{
+    left: 36%;
+    line-height: 150%;
+    text-align: center;
+    top: 148%;
+    width: 28%;
+    position: absolute;
+    font-size: 140%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
+
+    
+    
+  }
+
+  .seccionImg1{
+    background-color: transparent;
+    position: absolute;
+    height: 30%;
+    left: 20%;
+    top: 125%;
+    width: 17%;
+  }
+
+  .seccionImg2{
+    background-color: transparent;
+    position: absolute;
+    height: 30%;
+    left: 63%;
+    top: 126%;
+    width: 17%;
+    transform: scaleX(-1);
+  }
+
+ /* Estilos para las cartas y botones en la sección2 */
+.seccion2 {
+  top: 165%;
+  background-color: transparent; /* Color de fondo de la sección */
+  padding: 40px 0; /* Espaciado interno */
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 15px; /* Bordes redondos para las cartas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-img-top {
+  border-top-left-radius: 10%; /* Esquinas redondas en la imagen superior de la carta */
+  border-top-right-radius: 10%;
+  filter:drop-shadow(8px 4px 15px #f58220);
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px; /* Espaciado interno del cuerpo de la carta */
+}
+
+.btn-primary {
+  background-color: #ff8c00; /* Color de fondo naranja para el botón */
+  border-color: #ff8c00; /* Color del borde naranja para el botón */
+}
+
+.btn-primary:hover {
+  background-color: #e07b00; /* Color de fondo naranja más oscuro al pasar el mouse */
+  border-color: #e07b00;
+}
+
+.card-title {
+  color: #333; /* Color del título de la carta */
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-text {
+  
+  margin-top: 15%;
+  color: #555; /* Color del texto de la carta */
+}
+
+.card-price {
+  
+  color: #ff8c00; /* Color del precio de la carta */
+}
+
+.bebidasespeciales{
+  position: absolute;
+  top: 255%;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 300%;
+  font-weight: 400%;
+  font-weight: bold;
+}
+
+.desc_bebidas_especia{
+  left: 36%;
+  line-height: 150%;
+  text-align: center;
+  top: 268%;
+  width: 28%;
+  position: absolute;
+  font-size: 140%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
+
+  
+  
+}
+
+.seccion3Img1{
+  background-color: transparent;
+  position: absolute;
+  height: 30%;
+  left: 20%;
+  top: 245%;
+  width: 17%;
+}
+
+.seccion3Img2{
+  background-color: transparent;
+  position: absolute;
+  height: 30%;
+  left: 63%;
+  top: 246%;
+  width: 17%;
+  transform: scaleX(-1);
+}
+
+/* Estilos para la sección de bebidas */
+.container-bebidas {
+  position: absolute;
+  top: 285%;
+  text-align: center;  
+  padding: 40px 0 ;
+  right: 15%;
+  left: 15%;
+}
+
+/* Estilos para cada bebida */
+
+.bebida {
+  width: 100%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bebida:hover {
+  transform: scale(1.05);
+}
+
+.bebida-img {
+  
+  width: 100%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  filter: drop-shadow(8px 4px 15px #f58220);
+}
+
+.bebida-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.bebida-titulo {
+  
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; /* Color del título de la bebida */
+  font-weight: bold;
+}
+
+.bebida-precio {
+  color: #ff8c00; /* Color naranja para el precio */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #ff8c00; /* Color de fondo naranja para el botón */
+  border-color: #ff8c00; /* Color del borde naranja para el botón */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #e07b00; /* Color naranja más oscuro al pasar el mouse */
+  border-color: #e07b00;
+}
+
+.div img{
+  filter: saturate(0%);
+  width: 10%;
+  border: 2px solid orange;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.div img:hover{
+  filter: saturate(100%);
+  width: 100%;
+}
