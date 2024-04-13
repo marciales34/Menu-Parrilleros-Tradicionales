@@ -2,6 +2,9 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
+import { PiePaginaComponent } from "../pie-pagina/pie-pagina.component";
+import { EncabezadoComponent } from "../encabezado/encabezado.component";
+
 
 @Component({
   selector: 'app-inicio',
@@ -22,8 +25,8 @@ export class InicioComponent {
 }
 
 @NgModule({
-  declarations: [InicioComponent],
-  imports: [CommonModule], // Asegúrate de incluir CommonModule aquí
+    declarations: [InicioComponent],
+    imports: [CommonModule, PiePaginaComponent, EncabezadoComponent]
 })
 export class InicioModule { }
 

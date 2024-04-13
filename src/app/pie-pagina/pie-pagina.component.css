@@ -1,0 +1,66 @@
+
+.seccionfinal {
+    margin-top: 225%;
+    bottom: 0;
+    background-color: #adadad;
+    width: 100%;
+    padding: 30px 0;
+    color: #000000;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.seccionfinal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+
+.seccionfinal p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.seccionfinal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.seccionfinal ul li {
+    margin-bottom: 10px;
+}
+
+.seccionfinal ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.seccionfinal ul li a:hover {
+    color: #e07b00;
+}
+
+.social-buttons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-buttons li a {
+    color: #000000;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-buttons li a:hover {
+    color: #e07b00;
+}
+
+.img-fluid{
+    margin-top: 6%;
+    margin-left: 50%;
+
+}
+.col-md-2{
+    margin-left: 5%;
+    width: 25%;
+}

@@ -1,347 +1,223 @@
 ::ng-deep body {
-    background-color: rgb(233, 233, 233);
-    margin: 0;
-    
-  }
-  .body{
-    width: 100%;
-  }
-  
-  .contenedor-principal{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    pointer-events: none;
-    max-height: 100%;
-    margin: 0% auto;
-  }
-  
-  .logo2{
-    position: absolute;
-    top: 5%;
-    right: 81%; 
-  }
-  
-  .circulo1{
-    border: 1px solid;
-    color: rgb(190, 188, 188);
-    border-radius: 50%;
-    height: 106%;
-    left: -23.1%;
-    position: absolute;
-    top: -42%;
-    width: 50.5%;
-  }
-  .circulo2{
-    border: 1px solid;
-    color: rgb(190, 188, 188);
-    border-radius: 50%;
-    height: 106%;
-    left: -23.5%;
-    position: absolute;
-    top: -62%;
-    width: 50.5%; 
-  }
-  .circulo3{
-    border: 1px solid;
-    color: rgb(190, 188, 188);
-    border-radius: 51%;
-    height: 106%;
-    left: -23.7%;
-    position: absolute;
-    top: -53.5%;
-    width: 50.5%; 
-  }
-  
-  .nav-botones{
-    position: absolute;
-    height: 10%;
-    left: 78%;
-    top: 4%;
-    width: 20%;
-    display: flex;
-    justify-content: 20%;
-    align-items: center;
-  }
-  
-  .boton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%; 
-    height: 80%; 
-    border-radius: 5px;
-    background-color: #f58220; 
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease-in-out;
-    margin: 0 2vw; 
-  }
-  
-  .boton button {
-    color: #ffffff; 
-    background-color: transparent;
-    font-size: 120%; 
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-  }
-  
-  .pagina-principal  {
-    background-color: transparent;
-    position: absolute;
-  }
-  
-  .navbar {
-    background-color: transparent;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position:  absolute;
-    top: 6%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
-    padding: 0.5%;
-    border: none;
-  }
-  
-  .barra {
-    background-color: transparent;
-    color: #000; 
-    border: none;
-    padding: 1%;
-    font-size: 115%;
-    cursor: pointer;
-    outline: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: overline; /* Evita el subrayado predeterminado */
-    transition: text-decoration 0.3s; 
+  background-color: rgb(233, 233, 233);
+  margin: 0;
 }
 
-/* Espacio entre "Menu" y "Reservaciones" */
-.barra:nth-child(2) {
-    margin-right: 10%;
+.body {
+  width: 100%;
 }
 
-/* Estilo para "Sobre nosotros" y "Contacto" */
-.barra:nth-child(3) {
-    margin-left: 10%;
+.contenedor-principal {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 100%;
+  margin: 0% auto;
 }
 
-.barra:hover {
-    text-decoration: underline;
+.imagen1 {
+  position: absolute;
+  height: 40%;
+  left: 79%;
+  top: 25%;
+  width: 18%;
+}
+.imagen2 {
+  position: absolute;
+  height: 29%;
+  left: 46%;
+  top: 38%;
+  width: 25%;
+}
+.imagen3 {
+  position: absolute;
+  height: 37%;
+  left: 83%;
+  top: 75%;
+  width: 16%;
 }
 
-  .imagen1 {
-    position: absolute;
-    height: 40%;
-    left: 79%; 
-    top: 25%;
-    width: 18%;
-    
-  }
-  .imagen2{
-    position: absolute;
-    height: 29%;
-    left: 46%;
-    top: 38%;
-    width: 25%;
-  }
-  .imagen3{
-    position: absolute;
-    height: 37%;
-    left: 83%;
-    top: 75%;
-    width: 16%;
-  }
-  
-  .restaurante{
-    position: absolute;
-    left: 60%;
-    top: 35%;
-    height: 78%;
-    width: 27%;
-    filter:drop-shadow(10px 7px 20px #f58220);
-  }
-  
-  .plato1{
-    position: absolute;
-    left: 45%;
-    top: 72%;
-    height: 42%;
-    width: 21%;
-    filter:drop-shadow(10px 7px 20px #f58220);
-  }
-  
-  .titulop{
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 410%;
-    font-weight: 400%;
-    height: auto;
-    left: 12%;
-    line-height: 109%;
-    position: absolute;
-    text-align: left;
-    top: 42%;
-    width: 42%;
-  }
-  
-  .texto1{
-    left: 12%;
-    line-height: 260%;
-    text-align: left;
-    top: 67%;
-    width: 28%;
-    position: absolute;
-    font-size: 140%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
+.restaurante {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+  height: 78%;
+  width: 27%;
+  filter: drop-shadow(10px 7px 20px #f58220);
+}
 
-  }
+.plato1 {
+  position: absolute;
+  left: 45%;
+  top: 72%;
+  height: 42%;
+  width: 21%;
+  filter: drop-shadow(10px 7px 20px #f58220);
+}
 
-  .botones_arriba{
-    background-color: transparent;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position:  absolute;
-    top: 89%;
-    left: 26%;
-    transform: translateX(-50%);
-    width: 40%;
-    padding: 0.5%;
-    border: none;
-    height: 10%;
-  }
+.titulop {
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 410%;
+  font-weight: 400%;
+  height: auto;
+  left: 12%;
+  line-height: 109%;
+  position: absolute;
+  text-align: left;
+  top: 42%;
+  width: 42%;
+}
 
-  .botonReservas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%; 
-    height: 90%; 
-    border-radius: 5px;
-    background-color: #f58220; 
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease-in-out;
-    margin: 0 2vw; 
-  }
-  
-  .botonReservas button {
-    color: #ffffff; 
-    background-color: transparent;
-    font-size: 130%; 
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-  }
+.texto1 {
+  left: 12%;
+  line-height: 260%;
+  text-align: left;
+  top: 67%;
+  width: 28%;
+  position: absolute;
+  font-size: 140%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
+}
 
-  .botonEspecial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%; 
-    height: 90%; 
-    border-radius: 5px;
-    background-color: black; 
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease-in-out;
-    margin: 0 2vw; 
-  }
-  
-  .botonEspecial button {
-    color: #ffffff; 
-    background-color: transparent;
-    font-size: 130%;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-  }
+.botones_arriba {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 89%;
+  left: 26%;
+  transform: translateX(-50%);
+  width: 40%;
+  padding: 0.5%;
+  border: none;
+  height: 10%;
+}
 
-  .linea{
-    background-color: black;
-    height: 0.3%;
-    left: 7%;
-    object-fit: cover;
-    position: absolute;
-    top: 109%;
-    width: 40%;
-  }
+.botonReservas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 90%;
+  border-radius: 5px;
+  background-color: #f58220;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  margin: 0 2vw;
+}
 
-  .linea2{
-    background-color: black;
-    height: 0.3%;
-    left: 0%;
-    object-fit: cover;
-    position: absolute;
-    top: 120%;
-    width: 100%;
-  }
+.botonReservas button {
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 130%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
 
-  .seccion2{
-    position: absolute;
-    top: 128%;
-    max-width: 100%;
-  }
-  .pagina-inicio2{
+.botonEspecial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 90%;
+  border-radius: 5px;
+  background-color: black;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  margin: 0 2vw;
+}
 
-    font-family: 'Courier New', Courier, monospace;
-    
-  }
+.botonEspecial button {
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 130%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
 
-  .platosespeciales{
-    position: absolute;
-    top: 135%;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 300%;
-    font-weight: 400%;
-    font-weight: bold;
-  }
+.linea {
+  background-color: black;
+  height: 0.3%;
+  left: 7%;
+  object-fit: cover;
+  position: absolute;
+  top: 109%;
+  width: 40%;
+}
 
-  .desc_platos_especia{
-    left: 36%;
-    line-height: 150%;
-    text-align: center;
-    top: 148%;
-    width: 28%;
-    position: absolute;
-    font-size: 140%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
+.linea2 {
+  background-color: black;
+  height: 0.3%;
+  left: 0%;
+  object-fit: cover;
+  position: absolute;
+  top: 120%;
+  width: 100%;
+}
 
-    
-    
-  }
+.seccion2 {
+  position: absolute;
+  top: 128%;
+  max-width: 100%;
+}
+.pagina-inicio2 {
+  font-family: "Courier New", Courier, monospace;
+}
 
-  .seccionImg1{
-    background-color: transparent;
-    position: absolute;
-    height: 30%;
-    left: 20%;
-    top: 125%;
-    width: 17%;
-  }
+.platosespeciales {
+  position: absolute;
+  top: 135%;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 300%;
+  font-weight: 400%;
+  font-weight: bold;
+}
 
-  .seccionImg2{
-    background-color: transparent;
-    position: absolute;
-    height: 30%;
-    left: 63%;
-    top: 126%;
-    width: 17%;
-    transform: scaleX(-1);
-  }
+.desc_platos_especia {
+  left: 36%;
+  line-height: 150%;
+  text-align: center;
+  top: 148%;
+  width: 28%;
+  position: absolute;
+  font-size: 140%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
+}
 
- /* Estilos para las cartas y botones en la sección2 */
+.seccionImg1 {
+  background-color: transparent;
+  position: absolute;
+  height: 30%;
+  left: 20%;
+  top: 125%;
+  width: 17%;
+}
+
+.seccionImg2 {
+  background-color: transparent;
+  position: absolute;
+  height: 30%;
+  left: 63%;
+  top: 126%;
+  width: 17%;
+  transform: scaleX(-1);
+}
+
+/* Estilos para las cartas y botones en la sección2 */
 .seccion2 {
   top: 165%;
   background-color: transparent; /* Color de fondo de la sección */
@@ -357,7 +233,7 @@
 .card-img-top {
   border-top-left-radius: 10%; /* Esquinas redondas en la imagen superior de la carta */
   border-top-right-radius: 10%;
-  filter:drop-shadow(8px 4px 15px #f58220);
+  filter: drop-shadow(8px 4px 15px #f58220);
 }
 
 .card-body {
@@ -382,27 +258,25 @@
 }
 
 .card-text {
-  
   margin-top: 15%;
   color: #555; /* Color del texto de la carta */
 }
 
 .card-price {
-  
   color: #ff8c00; /* Color del precio de la carta */
 }
 
-.bebidasespeciales{
+.bebidasespeciales {
   position: absolute;
   top: 255%;
   color: black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 300%;
   font-weight: 400%;
   font-weight: bold;
 }
 
-.desc_bebidas_especia{
+.desc_bebidas_especia {
   left: 36%;
   line-height: 150%;
   text-align: center;
@@ -410,13 +284,11 @@
   width: 28%;
   position: absolute;
   font-size: 140%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive, ;
-
-  
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
 }
 
-.seccion3Img1{
+.seccion3Img1 {
   background-color: transparent;
   position: absolute;
   height: 30%;
@@ -425,7 +297,7 @@
   width: 17%;
 }
 
-.seccion3Img2{
+.seccion3Img2 {
   background-color: transparent;
   position: absolute;
   height: 30%;
@@ -439,8 +311,8 @@
 .container-bebidas {
   position: absolute;
   top: 285%;
-  text-align: center;  
-  padding: 40px 0 ;
+  text-align: center;
+  padding: 40px 0;
   right: 15%;
   left: 15%;
 }
@@ -461,7 +333,6 @@
 }
 
 .bebida-img {
-  
   width: 100%;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
@@ -474,7 +345,6 @@
 }
 
 .bebida-titulo {
-  
   font-size: 18px;
   margin-bottom: 10px;
   color: #333; /* Color del título de la bebida */
@@ -505,7 +375,6 @@
   position: absolute;
   top: 370%;
   left: 11%;
-  
 }
 
 .imagen {
@@ -516,13 +385,5 @@
 }
 
 .imagen:hover {
-  transform: scale(1.1);
-}
-
-.seccionfinal{
-  position: absolute;
-  top: 460%;
-  background-color: #adadad;
-  width: 100%;
-  height: 25%;
+  transform: scale(1.5);
 }

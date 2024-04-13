@@ -1,6 +1,7 @@
 
 import { RouterOutlet } from '@angular/router';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ConexionService } from './conexion.service';
 
 
 @Component({
@@ -11,6 +12,21 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrl: './app.component.css',
   
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'MenuRestauranteParillaMaestra';
+
+  constructor(private conexionService: ConexionService) {}
+
+  ngOnInit(): void {
+    this.conexionService.conectarBaseDatos();
+
+    this.conexionService.ejecutarConsulta().subscribe(
+      (resultado: any) => {
+        console.log('Resultado de la consulta:', resultado);
+      },
+      (error) => {
+        console.error('Error al ejecutar la consulta:', error);
+      }
+    );
+  }
 }

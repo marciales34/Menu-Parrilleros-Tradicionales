@@ -1,4 +1,6 @@
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -6,7 +8,7 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements AfterViewInit {
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private router: Router) {}
 
   ngAfterViewInit(): void {
     const signUpButton = this.elementRef.nativeElement.querySelector("#signUp");
@@ -20,6 +22,12 @@ export class LoginComponent implements AfterViewInit {
     signInButton.addEventListener("click", () => {
       container.classList.remove("right-panel-active");
     });
+
+
+  }
+
+  redirigiraRegisitro(){
+    this.router.navigateByUrl('/inicio'); 
   }
 }
 
