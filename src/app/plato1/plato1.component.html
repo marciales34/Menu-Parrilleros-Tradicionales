@@ -1,30 +1,18 @@
+<section class="contenedorprinncipal">
 <section>
-    <img class="logo2" src="../assets/img/logo4.png" alt="logo" />
-    <div class="navbar">
-        <button class="barra">Menu</button>
-        <button class="barra">Reservaciones</button>
-        <button class="barra">Sobre Nosotros</button>
-        <button class="barra">Contacto</button>
-    </div>
-    <div class="nav-botones">
-        <div class="boton">
-            <button type="" class="signin">Acceso</button>
-        </div>
-        <div class="boton">
-            <button type="" class="signin2">Registro</button>
-        </div>
-    </div>
+  <app-encabezado></app-encabezado>
 </section>
 
-<section class="hero2">
-    <h1>Delicia Grill: Carne, Papas y Verduras</h1>
-</section>
+
 <section class="hero">
     <h2>Disfruta de este clásico plato de la Parrilla Maestra</h2>
     <p>Disfruta de nuestra exquisita creación: tierna carne de
         ternera, suaves papas criollas y verdura al gusto, todo
         fusionado en una rica salsa de tomate casera.</p>
         <img src="../../assets/img/MENU2.jpg" alt="">
+</section>
+<section class="hero2">
+  <h1>Delicia Grill: Carne, Papas y Verduras</h1>
 </section>
 <section class="informacion">
     <h3>Información nutricional</h3>
@@ -37,46 +25,15 @@
 </section>
 <section class="precio">
     <h2>Precio: $45.900</h2>
-    <a href="#">¡Reserva Mesa Ahora!</a>
-</section>
-<section class="galeria">
-    <img src="../../assets/img/gall1.jpg" alt="Imagen 1" class="imagen">
-    <img src="../../assets/img/gall2.jpg" alt="Imagen 2" class="imagen">
-    <img src="../../assets/img/gall3.jpg" alt="Imagen 3" class="imagen">
-    <img src="../../assets/img/gall4.jpg" alt="Imagen 4" class="imagen">
-    <img src="../../assets/img/gall5.jpg" alt="Imagen 5" class="imagen">
-    <img src="../../assets/img/gall6.jpg" alt="Imagen 6" class="imagen">
-  </section>
-
-<section class="seccionfinal">
+    <button type="" (click)="redirigirReservas()"> ¡Reserva Mesa Ahora!</button>
     
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Parrilla Maestra: BAR & GRILL"</h2>
-          <p>¡Disfruta de la mejor carne a la parrilla en un ambiente cálido y acogedor!</p>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-map-marker-alt"></i> Calle Mayor, 123, Ciudad, Código Postal</li>
-            <li><i class="fas fa-phone"></i> +57 123 456 7890</li>
-            <li><i class="fas fa-envelope"></i> [dirección de correo electrónico eliminada]</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3>Menú y Reservas</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Reservas</a></li>
-          </ul>
-          <h3>Síguenos en:</h3>
-          <ul class="list-inline social-buttons">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <img src="../../assets/img/logo4.png" alt="Imagen de una parrilla con carne a la brasa" class="img-fluid">
-        </div>
-      </div>
-    </div>
-  </section>
+</section>
+<section>
+<footer>
+  
+    <app-pie-pagina></app-pie-pagina>
+    
+</footer>
+</section>
+
+</section>

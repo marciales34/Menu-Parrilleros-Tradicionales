@@ -1,0 +1,62 @@
+<section class="paginaprincipal">
+
+
+    <section class="seccion1">
+  
+      <div>
+        <app-encabezado></app-encabezado>
+      </div>
+  
+    </section>
+  
+    <h1 class="titulo1">¡Trabaja con Nosotros Ahora!</h1>
+
+    <p class="descTrabaja">
+        Parrilla Maestra nos esforzamos constantemente por alcanzar la excelencia, por ello, animamos activamente el crecimiento de individuos con talento profesional destacado, con quienes podamos establecer relaciones duraderas.
+      </p>
+
+      <p class="descTrabaja">
+        Por favor, complete el siguiente formato para que podamos conocerlo y considerarlo para unirse a nuestro equipo.
+      </p>
+  
+    <div class="plantas">
+          <img class="imagen1" alt="img1" src="../assets/img/img1.png" />
+          <img class="imagen2" alt="img2" src="../assets/img/img2.png" />
+          <img class="imagen3" alt="img3" src="../assets/img/img3.png" />
+        </div>
+  
+    <section class="formulario">
+      <div class="container">
+        <div class="form-container">
+          <form id="reserva-form">
+            <div class="form-group">
+              <label for="nombre-usuario">Nombre:</label>
+              <input type="text" name="nombre_usuario" id="nombre-usuario" formControlName="nombre_usuario">
+            </div>
+            <div class="form-group">
+              <label for="num-personas">Apellidos</label>
+              <input type="text" name="num_personas" id="num-personas"  min="1"  formControlName="num_personas">
+            </div>
+            <div class="form-group">
+              <label for="fecha-reserva">Email</label>
+              <input type="text" name="fecha_reservacion" id="fecha-reserva"  formControlName="fecha_reservacion">
+            </div>
+            <div class="form-group">
+              <label for="hora-reserva">Telefono</label>
+              <br>
+              <input type="text" name="hora_reservacion" id="hora-reserva" formControlName="hora_reservacion" >
+              <div class="form-group"><br>
+                <label for="hoja-vida">Hoja de Vida:</label>
+                <input type="file" name="hoja_vida" id="hoja-vida">
+              </div>
+            </div><br>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  
+    <section class="piePagina">
+      <app-pie-pagina></app-pie-pagina>
+    </section>
+  </section>

@@ -1,3 +1,4 @@
+<section class="inicioprincipal">
 <div class="contenedor-principal">
   <div class="pagina-inicio">
     <section class="seccion1">
@@ -17,7 +18,7 @@
       </div>
 
       <div class="textoo1">
-        <h1 class="titulop">Te ofrecemos la mejor comida!!</h1>
+        <h1 class="titulop">{{text1}}la mejor comida!!</h1>
         <p class="texto1">
           Deléitate con nuestra exquisita selección de carnes premium,
           cuidadosamente preparadas para ofrecerte una experiencia culinaria
@@ -27,10 +28,10 @@
 
       <div class="botones_arriba">
         <div class="botonReservas">
-          <button type="" class="signin">Especial</button>
+          <button type="" class="signin" (click)="redirigirPlato1()">Especial</button>
         </div>
         <div class="botonEspecial">
-          <button type="" class="signin2">Reservaciones</button>
+          <button type="" class="signin2" (click)="redirigirReservas()">Reservaciones</button>
         </div>
       </div>
 
@@ -54,6 +55,8 @@
     <img class="seccionImg1" src="../../assets/img/img1.png" alt="" />
     <img class="seccionImg2" src="../../assets/img/img1.png" alt="" />
   </div>
+
+
   <section class="seccion2">
     <div class="pagina-inicio2">
       <div class="container">
@@ -86,7 +89,7 @@
                   fusionado en una rica salsa de tomate casera.
                 </p>
                 <p class="card-price">$12</p>
-                <button class="btn btn-primary">Mas Informacion</button>
+                <button class="btn btn-primary" (click)="redirigirPlato1()">Mas Informacion</button>
               </div>
             </div>
           </div>
@@ -126,6 +129,8 @@
       </div>
     </div>
   </section>
+
+  
 
   <p class="desc_bebidas_especia">
     Descubre la perfección en cada bocado con nuestros platillos de carne en la
@@ -191,12 +196,15 @@
     <img src="../../assets/img/gall5.jpg" alt="Imagen 5" class="imagen">
     <img src="../../assets/img/gall6.jpg" alt="Imagen 6" class="imagen">
   </section>
-  
+
 </div>
-<div>
+<footer>
   <app-pie-pagina></app-pie-pagina>
- 
-</div>
+</footer>
+
+
+</section>
+
 
 
 

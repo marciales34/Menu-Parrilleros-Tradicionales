@@ -6,7 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { Plato1Component } from './plato1/plato1.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
-import { RegistroComponent } from './registro/registro.component';
+import { Reservacomponent } from './reserva/Reserva.component';
+import { TrabajaComponent } from './trabaja/trabaja.component';
+
+
 
 export const routes: Routes = [
     {path: '', component:InicioComponent},
@@ -14,5 +17,8 @@ export const routes: Routes = [
     {path: 'plato1', component:Plato1Component},
     {path: 'piepagina', component:PiePaginaComponent},
     {path: 'encabezado', component:EncabezadoComponent},
-    { path: 'registro', component: RegistroComponent }
+    {path: 'reserva', component:Reservacomponent},
+    {path: 'trabaja', component:TrabajaComponent}
+ 
+   
 ];

@@ -1,19 +1,19 @@
 
 .seccionfinal {
-    margin-top: 225%;
+    position: relative; /* Cambiado a posicionamiento fijo */
     bottom: 0;
     background-color: #adadad;
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0; /* Reducido el padding para que no sea demasiado grande */
     color: #000000;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5%;
 }
 
 .seccionfinal h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    
 }
 
 .seccionfinal p {
@@ -58,8 +58,8 @@
 .img-fluid{
     margin-top: 6%;
     margin-left: 50%;
-
 }
+
 .col-md-2{
     margin-left: 5%;
     width: 25%;

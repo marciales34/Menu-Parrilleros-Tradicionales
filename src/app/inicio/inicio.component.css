@@ -387,3 +387,7 @@
 .imagen:hover {
   transform: scale(1.5);
 }
+
+footer {
+  margin-top: 228%;
+}

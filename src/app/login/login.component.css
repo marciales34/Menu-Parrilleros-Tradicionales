@@ -5,7 +5,7 @@
     margin: 0;
   }
   .logo2 {
-    margin-top: 3%;
+    margin-top: 1%;
 	margin-left: 42%;
   }
 
@@ -20,8 +20,8 @@ body {
 	align-items: center;
 	flex-direction: column;
 	font-family: "Montserrat", sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
+	height: 100%;
+	margin: 0;
 }
 
 h1 {
@@ -103,10 +103,11 @@ input {
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
 	overflow: hidden;
-	width: 55%;
+	width: 70%;
+	height: 520px; /* Altura del contenedor en porcentaje */
+	min-height: 50%; /* Altura mínima del contenedor en porcentaje */
 	max-width: 100%;
-	min-height: 480px;
-	margin-top: 5%;
+	margin-top: 2%;
     
 	
 }
@@ -260,3 +261,9 @@ footer a {
 	color: #3c97bf;
 	text-decoration: none;
 }
+
+.error-message {
+	color: red; /* Color rojo para los mensajes de error */
+	font-size: 14px; /* Tamaño de fuente */
+	margin-top: 5px; /* Espacio superior */
+  }
