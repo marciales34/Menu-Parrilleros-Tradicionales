@@ -62,6 +62,7 @@ export class LoginComponent implements AfterViewInit {
             this.router.navigate(['']);
           },
           (error) => {
+            
             console.error('Error al registrar usuario:', error);
             alert("Por favor completa todos los campos.");
           }
