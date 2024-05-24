@@ -6,13 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
+  private apiUrl = 'http://localhost:3000'; // Suponiendo que esta es la URL base de tu API
 
-  private apiUrl = 'http://localhost:3000/consultar'; // URL de tu servidor Express para la consulta
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  // Método para obtener los datos de la consulta
-  obtenerDatosConsulta(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  getUsers(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/consultar`);
   }
+
+  registerUser(user: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/registro`, user);
+  }
+
+  loginUser(credentials: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/login`, credentials);
+  }
+
+  // Añade otros métodos de servicio aquí...
 }

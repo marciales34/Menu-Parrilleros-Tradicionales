@@ -1,0 +1,78 @@
+<section class="paginaprincipal">
+
+
+  <section class="seccion1">
+
+    <div>
+      <app-encabezado></app-encabezado>
+    </div>
+
+  </section>
+
+  <h1 class="titulo1">¡Gestiona tus Reservas Ahora!</h1>
+
+  <div class="plantas">
+    <img class="imagen1" alt="img1" src="../assets/img/img1.png" />
+    <img class="imagen2" alt="img2" src="../assets/img/img2.png" />
+    <img class="imagen3" alt="img3" src="../assets/img/img3.png" />
+  </div>
+
+  <section class="tablareservaciones">
+    <div *ngIf="reservas.length > 0 && !estadoEdicion" class="reservas-container">
+      <h2>Tus Reservas</h2>
+      <table class="reservas-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Número de Personas</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reserva of reservas">
+            <td>{{ reserva.fecha_reservacion }}</td>
+            <td>{{ reserva.hora_reservacion }}</td>
+            <td>{{ reserva.num_personas }}</td>
+            <td>
+              <button type="button" class="boton" (click)="editarReserva(reserva)">Editar</button>
+              <button type="button" class="boton" (click)="eliminarReserva(reserva)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="reservas.length === 0 && !estadoEdicion" class="no-reservas">
+      <p>No tienes reservas registradas.</p>
+    </div>
+  </section>
+
+  <section class="formulario">
+    <section class="container" *ngIf="estadoEdicion">
+      <h1>Editar Reserva</h1>
+      <form id="reserva-form" [formGroup]="formulario">
+        <div class="form-group">
+          <label for="num-personas">Elige Número de personas:</label>
+          <input type="number" name="num_personas" id="num-personas" min="1" formControlName="num_personas">
+        </div>
+        <div class="form-group">
+          <label for="fecha-reserva">Fecha de reserva:</label>
+          <input type="date" name="fecha_reservacion" id="fecha-reserva" formControlName="fecha_reservacion">
+        </div>
+        <div class="form-group">
+          <label for="hora-reserva">Hora de reserva:</label>
+          <br>
+          <input type="time" name="hora_reservacion" id="hora-reserva" formControlName="hora_reservacion">
+        </div>
+        <div class="button-container">
+          <button type="button" (click)="guardarEdicion()">Guardar</button>
+          <button type="button" (click)="cancelarEdicion()">Cancelar</button>
+        </div>
+      </form>
+    </section>
+  </section>
+
+  <section class="piePagina">
+    <app-pie-pagina></app-pie-pagina>
+  </section>
+</section>

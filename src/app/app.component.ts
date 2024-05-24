@@ -1,8 +1,8 @@
-
 import { RouterOutlet } from '@angular/router';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ConexionService } from './conexion.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -11,12 +11,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [RouterOutlet, ReactiveFormsModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'MenuRestauranteParillaMaestra';
 
   constructor(private conexionService: ConexionService) {}
+
+
 
   ngOnInit(): void {
     this.conexionService.conectarBaseDatos();

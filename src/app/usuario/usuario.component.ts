@@ -3,17 +3,19 @@ import { UsuarioService } from '../usuario.service';
 
 @Component({
   selector: 'app-usuario',
-  standalone: true,
-  imports: [],
   templateUrl: './usuario.component.html',
-  styleUrl: './usuario.component.css'
+  styleUrls: ['./usuario.component.css']
 })
-export class UsuarioComponent implements OnInit{
+export class UsuarioComponent implements OnInit {
 
-  constructor(private usuarioService: UsuarioService){}
+  constructor(private usuarioService: UsuarioService) { }
+
+  ngOnInit(): void {
+    this.obtenerDatosConsulta();
+  }
 
   obtenerDatosConsulta(): void {
-    this.usuarioService.obtenerDatosConsulta().subscribe(
+    this.usuarioService.getUsers().subscribe(
       datos => {
         // Aquí maneja los datos de la consulta recibidos
         console.log(datos);
@@ -23,9 +25,4 @@ export class UsuarioComponent implements OnInit{
       }
     );
   }
-
-  ngOnInit(): void {
-    this.obtenerDatosConsulta();
-  }
-
 }

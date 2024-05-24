@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2'
 
 @Component({
     selector: 'app-trabaja',
@@ -36,7 +37,7 @@ export class TrabajaComponent {
             .subscribe(
               (response: any) => {
                 console.log('Respuesta del servidor:', response);
-                alert("Reserva Registrada Correctamente");
+                Swal.fire("Reserva Registrada Correctamente");
                 // Ahora podemos usar la propiedad 'name' en la respuesta para obtener el nombre del usuario
                 this.router.navigate(['']);
               },

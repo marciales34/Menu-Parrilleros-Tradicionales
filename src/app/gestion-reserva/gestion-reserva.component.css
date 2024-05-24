@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.imagen1 {
+  height: 300px;
+  position: absolute;
+  margin-top: 18%;
+  margin-left: 40%;
+}
+
+.imagen2 {
+  height: 300px;
+  position: absolute;
+  margin-left: 10%;
+}
+
+.imagen3 {
+  height: 300px;
+  position: absolute;
+  margin-left: 69%;
+  margin-top: 4%;
+}
+
+.titulo1 {
+  margin-top: 10%;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 300%;
+  font-weight: 400%;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+
+/* CSS TABLA DE RESERVAS */
+
+
+/* Container for the reservations */
+
+.tablareservaciones{
+
+  margin-top: 2%;
+  position: relative;
+
+}
+.reservas-container {
+  
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Heading styles */
+.reservas-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Table styles */
+.reservas-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+.reservas-table th {
+  background-color: #f58220;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table row styles */
+.reservas-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping for table rows */
+.reservas-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for table rows */
+.reservas-table tbody tr:hover {
+  background-color: #e9e9e9;
+}
+
+/* No reservations message */
+.no-reservas {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 50%) {
+  .reservas-container {
+    padding: 15px;
+  }
+  .reservas-table th, .reservas-table td {
+    padding: 10px;
+  }
+}
+
+
+.piePagina{
+
+    margin-top: 9%;
+
+}
+
+
+.boton {
+  
+  color: #FFFFFF;
+  justify-content: center;
+  width: 40%; 
+  border-radius: 5px;
+  background-color: #f58220; 
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  margin: 5%;
+}
+
+.boton:hover {
+  background-color: #000000;
+  color: #ffffff; /* Cambia el color del texto si es necesario para asegurar que sea legible */
+}
+
+
+.formulario{
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+
+}
+
+.reserva-menu {
+  position: fixed; 
+  top: 0;
+  left: 20; 
+  width: 60%;
+  
+  background-color: #f58220;
+  color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.reserva-menu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.reserva-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  padding: 40px; 
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}  
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="text"],
+input[type="time"],
+
+textarea {
+  width: calc(100% - 24px);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+button {
+  width: 30%;
+  padding: 12px;
+  background-color: #f58220;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos con un espacio entre ellos */
+}
+
+.button-container button {
+  width: calc(50% - 5px); /* Ancho del 50% menos el margen horizontal */
+}

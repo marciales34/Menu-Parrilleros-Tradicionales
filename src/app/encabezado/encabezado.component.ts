@@ -54,4 +54,8 @@ export class EncabezadoComponent {
   redirigirInicio(){
     this.router.navigate(['']); 
   }
+
+  redirigirAlGestionReservas(){
+    this.router.navigate(['/gestion-reserva'])
+  }
 }

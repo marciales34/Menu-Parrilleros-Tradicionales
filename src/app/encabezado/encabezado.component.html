@@ -15,12 +15,17 @@
             <button type="" class="signin2" (click)="redirigirALogin()">Registro</button>
         </div>
         <div class="boton" *ngIf="loggedIn()">
-            <button type="button" class="loggedin" (click)="logout()">¡Welcome!  {{ getUsername() }}</button>
+            <button type="button" class="loggedin" (click)="redirigirAlGestionReservas()">Mis reservas</button>
         </div>
+
+        <div class="boton" *ngIf="loggedIn()">
+            <button type="button" class="loggedin" (click)="logout()">¡Welcome! {{ getUsername() }}</button>
+        </div>
+
     </div>
-    
-    
-    
+
+
+
 
     <div class="navbar">
         <button class="barra" type="" (click)="redirigirInicio()">Menu</button>

@@ -8,6 +8,7 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { Reservacomponent } from './reserva/Reserva.component';
 import { TrabajaComponent } from './trabaja/trabaja.component';
+import { GestionReservaComponent } from './gestion-reserva/gestion-reserva.component';
 
 
 
@@ -18,7 +19,8 @@ export const routes: Routes = [
     {path: 'piepagina', component:PiePaginaComponent},
     {path: 'encabezado', component:EncabezadoComponent},
     {path: 'reserva', component:Reservacomponent},
-    {path: 'trabaja', component:TrabajaComponent}
+    {path: 'trabaja', component:TrabajaComponent},
+    {path: 'gestion-reserva', component:GestionReservaComponent}
  
    
 ];

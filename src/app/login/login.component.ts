@@ -8,6 +8,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import Swal from 'sweetalert2';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +23,8 @@ export class LoginComponent implements AfterViewInit {
     private elementRef: ElementRef,
     private router: Router,
     private http: HttpClient,
-    private form: FormBuilder
+    private form: FormBuilder,
+    private alert: AlertService
   ) {
     this.formulario = this.form.group({
       name: ['', Validators.required],
@@ -59,6 +62,7 @@ export class LoginComponent implements AfterViewInit {
             alert("Registrado Correctamente");
             // Ahora podemos usar la propiedad 'name' en la respuesta para obtener el nombre del usuario
             localStorage.setItem('username', response.name);
+            localStorage.setItem('userId',response.id);
             this.router.navigate(['']);
           },
           (error) => {
@@ -79,8 +83,9 @@ export class LoginComponent implements AfterViewInit {
       .subscribe(
         (response: any) => {
           console.log('Respuesta del servidor:', response);
-          alert("Sesión iniciada correctamente")
+          this.alert.success('Sesion iniciada Correctamente');
           localStorage.setItem('username', response.usuario); 
+          localStorage.setItem('userId',response.id);
           this.router.navigate(['']);
            // Guardar el correo electrónico en el almacenamiento local
 
