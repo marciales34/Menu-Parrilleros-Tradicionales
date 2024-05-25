@@ -1,6 +1,7 @@
 import { CommonModule, NgIf, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -14,7 +15,7 @@ export class EncabezadoComponent {
 
   constructor(
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object, private alert: AlertService
   ) {}
 
   loggedIn(): boolean {
@@ -33,9 +34,14 @@ export class EncabezadoComponent {
 
   logout() {
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.removeItem('username');
-      alert("Su sesión ha FINALIZADO.");
-      this.router.navigate(['']);
+      this.alert.confirmLogout('Confirmación', '¿Estás seguro de que deseas cerrar sesión?')
+        .then((result) => {
+          if (result.isConfirmed) {
+            localStorage.removeItem('username');
+            this.alert.success('¡Tu sesión ha finalizado exitosamente!');
+            this.router.navigate(['']);
+          }
+        });
     }
   }
 
@@ -49,6 +55,10 @@ export class EncabezadoComponent {
 
   redirigirTrabaja(){
     this.router.navigateByUrl('/trabaja')
+  }
+
+  redirigirContacto(){
+    this.router.navigateByUrl('/contacto')
   }
 
   redirigirInicio(){

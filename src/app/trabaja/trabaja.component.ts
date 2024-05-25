@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2'
+import { AlertService } from '../alert.service';
 
 @Component({
     selector: 'app-trabaja',
@@ -19,7 +20,8 @@ export class TrabajaComponent {
     constructor(
         private router: Router,
         private http: HttpClient,
-        private form: FormBuilder
+        private form: FormBuilder,
+        private alert: AlertService
       ) {this.formulario = this.form.group({
         nombre: ['', Validators.required],
         apellidos: ['', Validators.required],
@@ -31,22 +33,33 @@ export class TrabajaComponent {
     formulario: FormGroup;
 
     onSubmit() {
-        if (this.formulario.valid) {
-          this.http
-            .post('http://localhost:3000/registroTrabajadores', this.formulario.value)
-            .subscribe(
-              (response: any) => {
-                console.log('Respuesta del servidor:', response);
-                Swal.fire("Reserva Registrada Correctamente");
-                // Ahora podemos usar la propiedad 'name' en la respuesta para obtener el nombre del usuario
-                this.router.navigate(['']);
-              },
-              (error) => {
-                console.error('Error al registrar la reserva:', error);
-                alert("Por favor completa todos los campos.");
-              }
-            );     
-        } 
+      if (this.formulario.valid) {
+        // Verificar si los campos están vacíos
+        const formValues = this.formulario.value;
+    
+        // Mostrar alerta de confirmación
+        this.alert.confirmSave('Confirmación', '¿Quieres enviar tu hoja de vida?')
+          .then((result) => {
+            if (result.isConfirmed) {
+              // Enviar la reserva al servidor
+              this.http.post('http://localhost:3000/registroTrabajadores', formValues)
+                .subscribe(
+                  (response: any) => {
+                    console.log('Respuesta del servidor:', response);
+                    this.alert.success('Hoja de vida enviada Correctamente');
+                    this.router.navigate(['']);
+                  },
+                  (error) => {
+                    console.error('Error al enviar la hoja de vida:', error);
+                    this.alert.error('Hubo un error al enviar la hoja de vida.');
+                  }
+                );
+            }
+          });
+      } else {
+        this.alert.error('Por favor completa todos los campos.');
       }
+    }
+    
 
 }

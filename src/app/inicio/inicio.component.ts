@@ -20,7 +20,7 @@ export class InicioComponent {
   images: string[] = ["gall1.jpg", "gall2.jpg", "gall3.jpg", "gall4.jpg", "gall5.jpg", "gall6.jpg"];
   zoomedIndex: number | null = null;
 
-  text1 = "Prueba2 "
+  text1 = "Saborea la comida en Parrilla Maestra"
   zoomImage(index: number): void {
     this.zoomedIndex = index;
   }
@@ -36,6 +36,11 @@ export class InicioComponent {
   redirigirPlato1(){
     this.router.navigateByUrl('/plato1')
   }
+
+  redirigirInicio(){
+    this.router.navigate(['']); 
+  }
+
 
   
 }

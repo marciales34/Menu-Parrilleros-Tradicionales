@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Swal from 'sweetalert2';
+import Swal, { SweetAlertResult } from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class AlertService {
       icon: "success",
       title: message,
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
     });
   }
 
@@ -31,6 +31,7 @@ export class AlertService {
       icon: 'warning',
       title: 'Warning',
       text: message
+      
     });
   }
 
@@ -39,6 +40,63 @@ export class AlertService {
       icon: 'info',
       title: 'Info',
       text: message
+    });
+  }
+  confirm(title: string, text: string): Promise<SweetAlertResult<any>> {
+    return Swal.fire({
+      title: title,
+      text: text,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar',
+      customClass: {
+        confirmButton: 'custom-ok-button',
+        cancelButton: 'custom-cancel-button'
+      }
+    });
+  }
+  confirmEdit(title: string, text: string): Promise<SweetAlertResult<any>> {
+    return Swal.fire({
+      title: title,
+      text: text,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, Editar',
+      cancelButtonText: 'Cancelar',
+      customClass: {
+        confirmButton: 'custom-ok-button',
+        cancelButton: 'custom-cancel-button'
+      }
+    });
+  }
+  confirmLogout(title: string, text: string): Promise<SweetAlertResult<any>> {
+    return Swal.fire({
+      title: title,
+      text: text,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, cerrar sesión',
+      cancelButtonText: 'Cancelar',
+      customClass: {
+        confirmButton: 'custom-ok-button',
+        cancelButton: 'custom-cancel-button'
+      }
+    });
+  }
+
+  confirmSave(title: string, text: string): Promise<SweetAlertResult<any>> {
+    return Swal.fire({
+      title: title,
+      text: text,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, Guardar',
+      cancelButtonText: 'Cancelar',
+      customClass: {
+        confirmButton: 'custom-ok-button',
+        cancelButton: 'custom-cancel-button'
+      }
     });
   }
 }

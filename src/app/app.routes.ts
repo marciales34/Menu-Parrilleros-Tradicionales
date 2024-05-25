@@ -9,6 +9,7 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { Reservacomponent } from './reserva/Reserva.component';
 import { TrabajaComponent } from './trabaja/trabaja.component';
 import { GestionReservaComponent } from './gestion-reserva/gestion-reserva.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 
@@ -20,7 +21,8 @@ export const routes: Routes = [
     {path: 'encabezado', component:EncabezadoComponent},
     {path: 'reserva', component:Reservacomponent},
     {path: 'trabaja', component:TrabajaComponent},
-    {path: 'gestion-reserva', component:GestionReservaComponent}
+    {path: 'gestion-reserva', component:GestionReservaComponent},
+    {path: 'contacto', component:ContactoComponent}
  
    
 ];

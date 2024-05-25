@@ -19,6 +19,9 @@ import { AlertService } from '../alert.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements AfterViewInit {
+  formularioLogin: FormGroup;
+  formulario: FormGroup;
+
   constructor(
     private elementRef: ElementRef,
     private router: Router,
@@ -28,15 +31,15 @@ export class LoginComponent implements AfterViewInit {
   ) {
     this.formulario = this.form.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]], // Añadido el validador de email
       password: ['', Validators.required],
       telefono: ['', Validators.required],
     });
-    this.formularioLogin =this.form.group({email:['', Validators.required], password:['', Validators.required]})
+    this.formularioLogin = this.form.group({
+      email: ['', [Validators.required, Validators.email]], // Añadido el validador de email
+      password: ['', Validators.required],
+    });
   }
-
-  formularioLogin: FormGroup;
-  formulario: FormGroup;
 
   ngAfterViewInit(): void {
     const signUpButton = this.elementRef.nativeElement.querySelector('#signUp');
@@ -52,49 +55,47 @@ export class LoginComponent implements AfterViewInit {
     });
   }
 
+  redirigirInicio(){
+    this.router.navigate(['']); 
+  }
+
   onSubmit() {
     if (this.formulario.valid) {
-      this.http
-        .post('http://localhost:3000/registro', this.formulario.value)
-        .subscribe(
-          (response: any) => {
-            console.log('Respuesta del servidor:', response);
-            alert("Registrado Correctamente");
-            // Ahora podemos usar la propiedad 'name' en la respuesta para obtener el nombre del usuario
-            localStorage.setItem('username', response.name);
-            localStorage.setItem('userId',response.id);
-            this.router.navigate(['']);
-          },
-          (error) => {
-            
-            console.error('Error al registrar usuario:', error);
-            alert("Por favor completa todos los campos.");
-          }
-        );     
-    } 
-  }
-  
-
-   login(){
-
-    if(this.formularioLogin.valid){
-      this.http
-      .post('http://localhost:3000/login', this.formularioLogin.value)
-      .subscribe(
+      this.http.post('http://localhost:3000/registro', this.formulario.value).subscribe(
         (response: any) => {
           console.log('Respuesta del servidor:', response);
-          this.alert.success('Sesion iniciada Correctamente');
-          localStorage.setItem('username', response.usuario); 
-          localStorage.setItem('userId',response.id);
+          this.alert.info("Registrado Correctamente");
+          localStorage.setItem('username', response.name);
+          localStorage.setItem('userId', response.id);
           this.router.navigate(['']);
-           // Guardar el correo electrónico en el almacenamiento local
-
         },
-        (error) =>{
-          console.error('Credenciales Incorrectas')
-          alert("Credenciales Incorrectas por favor REVISAR!")
+        (error) => {
+          console.error('Error al registrar usuario:', error);
+          this.alert.error("Error al registrar usuario. Por favor, inténtelo de nuevo.");
         }
-      );    
+      );
+    } else {
+      this.alert.error("Por favor, completa todos los campos.");
+    }
+  }
+
+  login() {
+    if (this.formularioLogin.valid) {
+      this.http.post('http://localhost:3000/login', this.formularioLogin.value).subscribe(
+        (response: any) => {
+          console.log('Respuesta del servidor:', response);
+          this.alert.success('Sesión iniciada correctamente');
+          localStorage.setItem('username', response.usuario);
+          localStorage.setItem('userId', response.id);
+          this.router.navigate(['']);
+        },
+        (error) => {
+          console.error('Credenciales Incorrectas');
+          this.alert.error("Credenciales incorrectas. Por favor, revisa e inténtalo de nuevo.");
+        }
+      );
+    } else {
+      this.alert.error("Por favor, completa todos los campos.");
     }
   }
 }

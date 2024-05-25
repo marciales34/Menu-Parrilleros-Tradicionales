@@ -104,10 +104,10 @@ input {
 	position: relative;
 	overflow: hidden;
 	width: 70%;
-	height: 520px; /* Altura del contenedor en porcentaje */
+	height: 560px; /* Altura del contenedor en porcentaje */
 	min-height: 50%; /* Altura mínima del contenedor en porcentaje */
 	max-width: 100%;
-	margin-top: 2%;
+	margin-top: 4%;
     
 	
 }

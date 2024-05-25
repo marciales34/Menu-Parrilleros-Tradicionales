@@ -4,6 +4,7 @@ import { EncabezadoComponent } from '../encabezado/encabezado.component';
 import { HttpClient } from '@angular/common/http';
 import { NgFor, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-gestion-reserva',
@@ -21,7 +22,7 @@ export class GestionReservaComponent implements OnInit {
   mostrarFormulario = false;
   
 
-  constructor(private http: HttpClient, private formBuilder: FormBuilder) {
+  constructor(private http: HttpClient, private formBuilder: FormBuilder, private alert: AlertService) {
     this.formulario = this.formBuilder.group({
         num_personas: ['', Validators.required],
         fecha_reservacion: ['', Validators.required],
@@ -45,23 +46,26 @@ export class GestionReservaComponent implements OnInit {
 
   eliminarReserva(reserva: any) {
     const reservaId = reserva.id_reservaciones;
-    if (confirm('¿Estás seguro de que quieres eliminar esta reserva?')) {
-      this.http.delete(`http://localhost:3000/reservas/${reservaId}`).subscribe(
-        () => {
-          alert('Reserva eliminada correctamente');
-          this.ngOnInit(); // Esto volverá a cargar las reservas después de eliminar una
-        },
-        (error) => {
-          console.error('Error al eliminar la reserva:', error);
-          alert('Error al eliminar la reserva');
+    this.alert.confirm('¿Estás seguro?', '¡No podrás revertir esto!')
+      .then((result) => {
+        if (result.isConfirmed) {
+          this.http.delete(`http://localhost:3000/reservas/${reservaId}`).subscribe(
+            () => {
+              this.alert.success('Reserva eliminada correctamente');
+              this.ngOnInit(); // Esto volverá a cargar las reservas después de eliminar una
+            },
+            (error) => {
+              console.error('Error al eliminar la reserva:', error);
+              this.alert.error('Error al eliminar la reserva');
+            }
+          );
         }
-      );
-    }
+      });
   }
 
   editarReserva(reserva: any) {
     this.reservaSeleccionada = reserva;
-    alert('¿Quieres Editar esta Reserva?');
+    this.alert.confirmEdit('¿Quieres Editar esta reserva?', '¡Por favor Confirma!')
     this.formulario.patchValue({
       num_personas: reserva.num_personas,
       fecha_reservacion: reserva.fecha_reservacion,
@@ -73,20 +77,26 @@ export class GestionReservaComponent implements OnInit {
   guardarEdicion() {
     const reservaId = this.reservaSeleccionada.id_reservaciones;
     const nuevaReserva = this.formulario.value;
-
-    this.http.put(`http://localhost:3000/reservas/${reservaId}`, nuevaReserva)
-      .subscribe(
-        (response: any) => {
-            alert('Seguro quieres Guardar la Reserva con los nuevos datos?');
-          console.log('Reserva actualizada correctamente:', response);
-          // Actualizar la lista de reservas
-          this.ngOnInit();
-          this.estadoEdicion = false;
-        },
-        (error) => {
-          console.error('Error al actualizar la reserva:', error);
+  
+    this.alert.confirmSave('¿Quieres Guardar esta reserva?', '¡Por favor Confirma!')
+      .then((result) => {
+        if (result.isConfirmed) {
+          this.http.put(`http://localhost:3000/reservas/${reservaId}`, nuevaReserva)
+            .subscribe(
+              (response: any) => {
+                this.alert.success('Reserva actualizada correctamente');
+                console.log('Reserva actualizada correctamente:', response);
+                // Actualizar la lista de reservas
+                this.ngOnInit();
+                this.estadoEdicion = false;
+              },
+              (error) => {
+                this.alert.error('Error al actualizar la reserva');
+                console.error('Error al actualizar la reserva:', error);
+              }
+            );
         }
-      );
+      });
   }
 
   cancelarEdicion() {
