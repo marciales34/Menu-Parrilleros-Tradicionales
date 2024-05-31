@@ -4,7 +4,10 @@ import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { PiePaginaComponent } from "../pie-pagina/pie-pagina.component";
 import { EncabezadoComponent } from "../encabezado/encabezado.component";
+import { GaleriaComponent } from "../galeria/galeria.component";
 import { Router } from '@angular/router';
+import { SliderBebidasComponent } from "../slider-bebidas/slider-bebidas.component";
+
 
 
 @Component({
@@ -49,7 +52,7 @@ export class InicioComponent {
 
 @NgModule({
     declarations: [InicioComponent],
-    imports: [CommonModule, PiePaginaComponent, EncabezadoComponent]
+    imports: [CommonModule, PiePaginaComponent, EncabezadoComponent, GaleriaComponent, SliderBebidasComponent]
 })
 export class InicioModule { }
 

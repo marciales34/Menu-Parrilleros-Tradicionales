@@ -1,211 +1,148 @@
 <section class="inicioprincipal">
-<div class="contenedor-principal">
-  <div class="pagina-inicio">
-    <section class="seccion1">
-      <div>
-        <app-encabezado></app-encabezado>
-      </div>
-
-      <div class="plantas">
-        <img class="imagen1" alt="img1" src="../assets/img/img1.png" />
-        <img class="imagen2" alt="img2" src="../assets/img/img2.png" />
-        <img class="imagen3" alt="img3" src="../assets/img/img3.png" />
-      </div>
-
-      <div class="imagenes-restaurante">
-        <img class="restaurante" src="../assets/img/RESTAU.png" alt="restau" />
-        <img class="plato1" src="../assets/img/plato1.png" alt="plato" />
-      </div>
-
-      <div class="textoo1">
-        <h1 class="titulop">{{text1}}</h1>
-        <p class="texto1">
-          Deléitate con nuestra exquisita selección de carnes premium,
-          cuidadosamente preparadas para ofrecerte una experiencia culinaria
-          única.
-        </p>
-      </div>
-
-      <div class="botones_arriba">
-        <div class="botonReservas">
-          <button type="" class="signin" (click)="redirigirPlato1()">Especial</button>
+  <div class="contenedor-principal">
+    <div class="pagina-inicio">
+      <section class="seccion1">
+        <div>
+          <app-encabezado></app-encabezado>
         </div>
-        <div class="botonEspecial">
-          <button type="" class="signin2" (click)="redirigirReservas()">Reservaciones</button>
-        </div>
-      </div>
 
-      <div class="lineas">
-        <div class="linea">
-          <img class="linea" src="../assets/img/linea1.svg" alt="linea" />
+        <div class="plantas">
+          <img class="imagen1" alt="img1" src="../assets/img/img1.png" />
+          <img class="imagen2" alt="img2" src="../assets/img/img2.png" />
+          <img class="imagen3" alt="img3" src="../assets/img/img3.png" />
         </div>
-        <div class="linea2">
-          <img class="linea2" src="../assets/img/linea1.svg" alt="linea" />
+
+        <div class="imagenes-restaurante">
+          <img class="restaurante" src="../assets/img/RESTAU.png" alt="restau" />
+          <img class="plato1" src="../assets/img/plato1.png" alt="plato" />
+        </div>
+
+        <div class="textoo1">
+          <h1 class="titulop">{{text1}}</h1>
+          <p class="texto1">
+            Deléitate con nuestra exquisita selección de carnes premium,
+            cuidadosamente preparadas para ofrecerte una experiencia culinaria
+            única.
+          </p>
+        </div>
+
+        <div class="botones_arriba">
+          <div class="botonReservas">
+            <button type="" class="signin" (click)="redirigirPlato1()">Especial</button>
+          </div>
+          <div class="botonEspecial">
+            <button type="" class="signin2" (click)="redirigirReservas()">Reservaciones</button>
+          </div>
+        </div>
+
+        <div class="lineas">
+          <div class="linea">
+            <img class="linea" src="../assets/img/linea1.svg" alt="linea" />
+          </div>
+          <div class="linea2">
+            <img class="linea2" src="../assets/img/linea1.svg" alt="linea" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <p class="desc_platos_especia">
+      Descubre la perfección en cada bocado con nuestros platillos de carne en la
+      Parrilla Maestra. Desde jugosas costillas hasta tiernos filetes.
+    </p>
+    <h1 class="platosespeciales">Nuestro Platos Especiales!</h1>
+
+    <div class="plantas_seccion2">
+      <img class="seccionImg1" src="../../assets/img/img1.png" alt="" />
+      <img class="seccionImg2" src="../../assets/img/img1.png" alt="" />
+    </div>
+
+
+    <section class="bebidasslider">
+
+      <app-slider-bebidas></app-slider-bebidas>
+
+    </section>
+
+    <div class="lineass">
+      <div class="linea22">
+        <img class="linea22" src="../assets/img/linea1.svg" alt="linea" />
+      </div>
+    </div>
+
+
+
+    <p class="desc_bebidas_especia">
+      Descubre la perfección en cada bocado con nuestros platillos de carne en la
+      Parrilla Maestra. Desde jugosas costillas hasta tiernos filetes.
+    </p>
+    <h1 class="bebidasespeciales">Nuestras Bebidas Especiales!</h1>
+
+    <div class="plantas_seccion2">
+      <img class="seccion3Img1" src="../../assets/img/img1.png" alt="" />
+      <img class="seccion3Img2" src="../../assets/img/img1.png" alt="" />
+    </div>
+    <section class="seccion3">
+      <div class="container-bebidas">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="bebida">
+              <img src="../../assets/img/jugo1.jpg" class="bebida-img" alt="Jugo sabor 1" />
+              <div class="bebida-body">
+                <h5 class="bebida-titulo">Jugo de Mora</h5>
+                <p class="bebida-precio">$5</p>
+                <button class="btn btn-primary">Mas Informacion</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bebida">
+              <img src="../../assets/img/JUGO-DE-NARANJA.jpg" class="bebida-img" alt="Jugo sabor 2" />
+              <div class="bebida-body">
+                <h5 class="bebida-titulo">Jugo de Naranaja</h5>
+                <p class="bebida-precio">$5</p>
+                <button class="btn btn-primary">Mas Informacion</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bebida">
+              <img src="../../assets/img/limon.jpg" class="bebida-img" alt="Jugo sabor 3" />
+              <div class="bebida-body">
+                <h5 class="bebida-titulo">Jugo de Limon</h5>
+                <p class="bebida-precio">$5</p>
+                <button class="btn btn-primary">Mas Informacion</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bebida">
+              <img src="../../assets/img/tomate.jpg" class="bebida-img" alt="Jugo sabor 4" />
+              <div class="bebida-body">
+                <h5 class="bebida-titulo">Jugo de Tomate</h5>
+                <p class="bebida-precio">$5</p>
+                <button class="btn btn-primary">Mas Informacion</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  </div>
-  <p class="desc_platos_especia">
-    Descubre la perfección en cada bocado con nuestros platillos de carne en la
-    Parrilla Maestra. Desde jugosas costillas hasta tiernos filetes.
-  </p>
-  <h1 class="platosespeciales">Nuestro Platos Especiales!</h1>
 
-  <div class="plantas_seccion2">
-    <img class="seccionImg1" src="../../assets/img/img1.png" alt="" />
-    <img class="seccionImg2" src="../../assets/img/img1.png" alt="" />
-  </div>
-
-
-  <section class="seccion2">
-    <div class="pagina-inicio2">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../../assets/img/MENU1.jpg" class="card-img-top" alt="Lumpia with Sauce" />
-              <div class="card-body">
-                <h5 class="card-title">Trío de Sabores Grill Maestro</h5>
-                <p class="card-text">
-                  Experimenta la perfección culinaria con nuestro plato
-                  destacado: jugosas rodajas de carne a la parrilla, papas
-                  asadas a la perfección y verduras frescas salteadas.
-                </p>
-                <p class="card-price">$12</p>
-                <button class="btn btn-primary">Mas Informacion</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../../assets/img/MENU2.jpg" class="card-img-top" alt="Fish and Veggie" />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Delicia Grill: Carne, Papas y Verduras
-                </h5>
-                <p class="card-text">
-                  Disfruta de nuestra exquisita creación: tierna carne de
-                  ternera, suaves papas criollas y verdura al gusto, todo
-                  fusionado en una rica salsa de tomate casera.
-                </p>
-                <p class="card-price">$12</p>
-                <button class="btn btn-primary" (click)="redirigirPlato1()">Mas Informacion</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../../assets/img/MENU3.avif" class="card-img-top" alt="Tofu Chili" />
-              <div class="card-body">
-                <h5 class="card-title">Parrillada Maestra de la Casa</h5>
-                <p class="card-text">
-                  Atrevete a conocer las sensaciones que provoca nuestro plato
-                  de la casa, exquisitos cortes de carnes finas, acompañadas de
-                  verduras salteadas y salsa al gusto.
-                </p>
-                <p class="card-price">$12</p>
-                <button class="btn btn-primary">Mas Informacion</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../../assets/img/menu6.jpg" class="card-img-top" alt="Egg and Cucumber" />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Sabores Hogareños : Parrilla Familiar:
-                </h5>
-                <p class="card-text">
-                  Comparte en familia de poderosas mariposas de carnes finas,
-                  teniendo como acompañamiento una porciona de arroz blanco
-                  junto con papa a la francesa y salsas al gusto.
-                </p>
-                <p class="card-price">$12</p>
-                <button class="btn btn-primary">Mas Informacion</button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="lineasss">
+      <div class="lineaaa">
+        <img class="lineaaa" src="../assets/img/linea1.svg" alt="linea" />
+      </div>
+      <div class="linea222">
+        <img class="linea222" src="../assets/img/linea1.svg" alt="linea" />
       </div>
     </div>
-  </section>
 
-  
-
-  <p class="desc_bebidas_especia">
-    Descubre la perfección en cada bocado con nuestros platillos de carne en la
-    Parrilla Maestra. Desde jugosas costillas hasta tiernos filetes.
-  </p>
-  <h1 class="bebidasespeciales">Nuestras Bebidas Especiales!</h1>
-
-  <div class="plantas_seccion2">
-    <img class="seccion3Img1" src="../../assets/img/img1.png" alt="" />
-    <img class="seccion3Img2" src="../../assets/img/img1.png" alt="" />
   </div>
-  <section class="seccion3">
-    <div class="container-bebidas">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="bebida">
-            <img src="../../assets/img/jugo1.jpg" class="bebida-img" alt="Jugo sabor 1" />
-            <div class="bebida-body">
-              <h5 class="bebida-titulo">Jugo de Mora</h5>
-              <p class="bebida-precio">$5</p>
-              <button class="btn btn-primary">Mas Informacion</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="bebida">
-            <img src="../../assets/img/JUGO-DE-NARANJA.jpg" class="bebida-img" alt="Jugo sabor 2" />
-            <div class="bebida-body">
-              <h5 class="bebida-titulo">Jugo de Naranaja</h5>
-              <p class="bebida-precio">$5</p>
-              <button class="btn btn-primary">Mas Informacion</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="bebida">
-            <img src="../../assets/img/limon.jpg" class="bebida-img" alt="Jugo sabor 3" />
-            <div class="bebida-body">
-              <h5 class="bebida-titulo">Jugo de Limon</h5>
-              <p class="bebida-precio">$5</p>
-              <button class="btn btn-primary">Mas Informacion</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="bebida">
-            <img src="../../assets/img/tomate.jpg" class="bebida-img" alt="Jugo sabor 4" />
-            <div class="bebida-body">
-              <h5 class="bebida-titulo">Jugo de Tomate</h5>
-              <p class="bebida-precio">$5</p>
-              <button class="btn btn-primary">Mas Informacion</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="galeria">
-    <img src="../../assets/img/gall1.jpg" alt="Imagen 1" class="imagen">
-    <img src="../../assets/img/gall2.jpg" alt="Imagen 2" class="imagen">
-    <img src="../../assets/img/gall3.jpg" alt="Imagen 3" class="imagen">
-    <img src="../../assets/img/gall4.jpg" alt="Imagen 4" class="imagen">
-    <img src="../../assets/img/gall5.jpg" alt="Imagen 5" class="imagen">
-    <img src="../../assets/img/gall6.jpg" alt="Imagen 6" class="imagen">
-  </section>
+  <footer class="footer">
+    <app-galeria></app-galeria>
+    <app-pie-pagina></app-pie-pagina>
 
-</div>
-<footer>
-  <app-pie-pagina></app-pie-pagina>
-</footer>
+  </footer>
 
 
 </section>
-
-
-
-
-

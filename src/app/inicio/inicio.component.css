@@ -5,6 +5,7 @@
 
 .body {
   width: 100%;
+  animation: fadeIn 2s;
 }
 
 .contenedor-principal {
@@ -58,7 +59,7 @@
 
 .titulop {
   color: black;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 410%;
   font-weight: 400%;
   height: auto;
@@ -74,7 +75,7 @@
   left: 12%;
   line-height: 260%;
   text-align: left;
-  top: 67%;
+  top: 64%;
   width: 28%;
   position: absolute;
   font-size: 140%;
@@ -214,61 +215,12 @@
   left: 63%;
   top: 126%;
   width: 17%;
-  transform: scaleX(-1);
-}
 
-/* Estilos para las cartas y botones en la sección2 */
-.seccion2 {
-  top: 165%;
-  background-color: transparent; /* Color de fondo de la sección */
-  padding: 40px 0; /* Espaciado interno */
-}
-
-.card {
-  background-color: transparent;
-  border-radius: 15px; /* Bordes redondos para las cartas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.card-img-top {
-  border-top-left-radius: 10%; /* Esquinas redondas en la imagen superior de la carta */
-  border-top-right-radius: 10%;
-  filter: drop-shadow(8px 4px 15px #f58220);
-}
-
-.card-body {
-  text-align: center;
-  padding: 20px; /* Espaciado interno del cuerpo de la carta */
-}
-
-.btn-primary {
-  background-color: #ff8c00; /* Color de fondo naranja para el botón */
-  border-color: #ff8c00; /* Color del borde naranja para el botón */
-}
-
-.btn-primary:hover {
-  background-color: #e07b00; /* Color de fondo naranja más oscuro al pasar el mouse */
-  border-color: #e07b00;
-}
-
-.card-title {
-  color: #333; /* Color del título de la carta */
-  font-weight: bold;
-  text-align: center;
-}
-
-.card-text {
-  margin-top: 15%;
-  color: #555; /* Color del texto de la carta */
-}
-
-.card-price {
-  color: #ff8c00; /* Color del precio de la carta */
 }
 
 .bebidasespeciales {
   position: absolute;
-  top: 255%;
+  top: 270%;
   color: black;
   font-family: "Courier New", Courier, monospace;
   font-size: 300%;
@@ -280,7 +232,7 @@
   left: 36%;
   line-height: 150%;
   text-align: center;
-  top: 268%;
+  top: 278%;
   width: 28%;
   position: absolute;
   font-size: 140%;
@@ -293,7 +245,7 @@
   position: absolute;
   height: 30%;
   left: 20%;
-  top: 245%;
+  top: 260%;
   width: 17%;
 }
 
@@ -302,7 +254,7 @@
   position: absolute;
   height: 30%;
   left: 63%;
-  top: 246%;
+  top: 260%;
   width: 17%;
   transform: scaleX(-1);
 }
@@ -310,7 +262,7 @@
 /* Estilos para la sección de bebidas */
 .container-bebidas {
   position: absolute;
-  top: 285%;
+  top: 295%;
   text-align: center;
   padding: 40px 0;
   right: 15%;
@@ -368,26 +320,44 @@
   border-color: #e07b00;
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  position: absolute;
-  top: 370%;
-  left: 11%;
+.footer{
+  margin-top:75% ;
 }
 
-.imagen {
-  width: 70%;
-  height: 70%;
+.bebidasslider{
+  position: relative;
+  margin-top: 83%;
+  margin-left: 1%;
+}
+
+.linea22 {
+  background-color: black;
+  height: 0.3%;
+  left: 0%;
   object-fit: cover;
-  transition: transform 0.9s ease-in-out;
+  position: absolute;
+  margin-top: 126%;
+  width: 100%;
 }
 
-.imagen:hover {
-  transform: scale(1.5);
+.linea222 {
+  background-color: black;
+  height: 0.3%;
+  left: 0%;
+  object-fit: cover;
+  position: absolute;
+  margin-top: 190%;
+  width: 100%;
 }
 
-footer {
-  margin-top: 228%;
+.lineaaa {
+  background-color: black;
+  height: 0.3%;
+  left: 30.1%;
+  object-fit: cover;
+  position: absolute;
+  margin-top: 192%;
+  width: 40%;
 }
+
+
