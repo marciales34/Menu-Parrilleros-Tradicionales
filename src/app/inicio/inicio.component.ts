@@ -17,7 +17,7 @@ import { SliderBebidasComponent } from "../slider-bebidas/slider-bebidas.compone
 })
 export class InicioComponent {
 
-  constructor(private router: Router,){
+  constructor(private router: Router){
 
   }
   images: string[] = ["gall1.jpg", "gall2.jpg", "gall3.jpg", "gall4.jpg", "gall5.jpg", "gall6.jpg"];

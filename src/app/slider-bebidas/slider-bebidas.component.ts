@@ -1,5 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { gsap } from 'gsap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider-bebidas',
@@ -15,6 +16,14 @@ export class SliderBebidasComponent implements AfterViewInit {
   start: any;
   slider: HTMLElement | null = null;
   trails: NodeListOf<HTMLDivElement> | null = null;
+
+  constructor(private router: Router){
+
+  }
+
+  redirigirPlato1(){
+    this.router.navigateByUrl('/plato1')
+  }
 
   ngAfterViewInit() {
     this.slider = document.querySelector('.slider');
