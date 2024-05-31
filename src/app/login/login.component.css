@@ -25,8 +25,9 @@ body {
 }
 
 h1 {
-	font-weight: bold;
 	margin: 0;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 300%;
 }
 
 h2 {
@@ -39,6 +40,7 @@ p {
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 span {
@@ -104,7 +106,7 @@ input {
 	position: relative;
 	overflow: hidden;
 	width: 70%;
-	height: 560px; /* Altura del contenedor en porcentaje */
+	height: 580px; /* Altura del contenedor en porcentaje */
 	min-height: 50%; /* Altura mínima del contenedor en porcentaje */
 	max-width: 100%;
 	margin-top: 4%;

@@ -149,8 +149,7 @@ body {
   font-weight: 500;
   margin-bottom: 1.5rem;
   width: 150%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .slider .box .details p {
