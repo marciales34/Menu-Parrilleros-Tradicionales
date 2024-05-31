@@ -7,6 +7,7 @@ import { EncabezadoComponent } from "../encabezado/encabezado.component";
 import { GaleriaComponent } from "../galeria/galeria.component";
 import { Router } from '@angular/router';
 import { SliderBebidasComponent } from "../slider-bebidas/slider-bebidas.component";
+import { SegundosliderComponent } from "../segundoslider/segundoslider.component";
 
 
 
@@ -52,7 +53,7 @@ export class InicioComponent {
 
 @NgModule({
     declarations: [InicioComponent],
-    imports: [CommonModule, PiePaginaComponent, EncabezadoComponent, GaleriaComponent, SliderBebidasComponent]
+    imports: [CommonModule, PiePaginaComponent, EncabezadoComponent, GaleriaComponent, SliderBebidasComponent, SegundosliderComponent]
 })
 export class InicioModule { }
 

@@ -12,6 +12,7 @@ import { GestionReservaComponent } from './gestion-reserva/gestion-reserva.compo
 import { ContactoComponent } from './contacto/contacto.component';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { SliderBebidasComponent } from './slider-bebidas/slider-bebidas.component';
+import { SegundosliderComponent } from './segundoslider/segundoslider.component';
 
 
 
@@ -26,7 +27,8 @@ export const routes: Routes = [
     {path: 'gestion-reserva', component:GestionReservaComponent},
     {path: 'contacto', component:ContactoComponent},
     {path: 'galeria', component:GaleriaComponent},
-    {path: 'bebidas', component:SliderBebidasComponent}
+    {path: 'bebidas', component:SliderBebidasComponent},
+    {path: 'platos', component:SegundosliderComponent}
  
    
 ];
